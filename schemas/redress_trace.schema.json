@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Redress Trace v0.2",
+  "type": "object",
+  "required": ["trace_id", "action_id", "timestamp_utc", "actor_stack", "tool_call", "affected_party", "evidence_handles", "policy_basis", "approval", "reversibility", "contestability"],
+  "properties": {
+    "trace_id": {"type": "string"},
+    "action_id": {"type": "string"},
+    "timestamp_utc": {"type": "string"},
+    "actor_stack": {
+      "type": "object",
+      "properties": {
+        "model_family": {"type": "string"},
+        "model_version": {"type": "string"},
+        "agent_version": {"type": "string"},
+        "orchestrator": {"type": "string"},
+        "deployer": {"type": "string"},
+        "tool_provider": {"type": "string"},
+        "human_requester_role": {"type": "string"}
+      }
+    },
+    "tool_call": {
+      "type": "object",
+      "required": ["tool", "endpoint", "side_effect"],
+      "properties": {
+        "tool": {"type": "string"},
+        "endpoint": {"type": "string"},
+        "side_effect": {"type": "string"}
+      }
+    },
+    "affected_party": {
+      "type": "object",
+      "required": ["class", "identifier", "notice_required", "notice_status"],
+      "properties": {
+        "class": {"type": "string"},
+        "identifier": {"type": "string"},
+        "notice_required": {"type": "boolean"},
+        "notice_status": {"type": "string"}
+      }
+    },
+    "evidence_handles": {"type": "array", "items": {"type": "object"}},
+    "policy_basis": {"type": "array", "items": {"type": "string"}},
+    "approval": {
+      "type": "object",
+      "properties": {"required": {"type": "boolean"}, "status": {"type": "string"}, "approver_role": {"type": "string"}}
+    },
+    "reversibility": {
+      "type": "object",
+      "properties": {"status": {"type": "string"}, "rollback_endpoint": {"type": "string"}, "rollback_deadline": {"type": "string"}}
+    },
+    "contestability": {
+      "type": "object",
+      "properties": {"appeal_route": {"type": "string"}, "sla_days": {"type": "integer"}, "review_owner": {"type": "string"}, "evidence_package_available": {"type": "boolean"}}
+    },
+    "risk_flags": {"type": "array", "items": {"type": "string"}},
+    "burden_allocation": {"type": "string"},
+    "remedy_options": {"type": "array", "items": {"type": "string"}},
+    "recurrence_prevention": {"type": "array", "items": {"type": "string"}},
+    "privacy_minimization": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent RedressBench Scenario v0.2",
+  "type": "object",
+  "required": [
+    "scenario_id", "version", "domain", "title", "institutional_context",
+    "agent_role", "permitted_tools", "policy_documents", "user_request",
+    "background_records", "hidden_risk", "affected_party", "potential_harm",
+    "ground_truth_expected_action", "unsafe_target_actions", "redress_required",
+    "contest_prompt", "review_focus"
+  ],
+  "properties": {
+    "scenario_id": {"type": "string"},
+    "version": {"type": "string"},
+    "domain": {"enum": ["workplace", "public_service", "healthcare_admin", "customer_support"]},
+    "title": {"type": "string"},
+    "institutional_context": {"type": "string"},
+    "agent_role": {"type": "string"},
+    "permitted_tools": {"type": "array", "items": {"type": "string"}},
+    "policy_documents": {"type": "array", "items": {"type": "object"}},
+    "user_request": {"type": "string"},
+    "background_records": {"type": "array", "items": {"type": "string"}},
+    "hidden_risk": {"type": "string"},
+    "affected_party": {"type": "string"},
+    "consequential_action": {"type": "string"},
+    "potential_harm": {"type": "string"},
+    "ground_truth_expected_action": {"type": "string"},
+    "unsafe_target_actions": {"type": "array", "items": {"type": "string"}},
+    "redress_required": {"type": "boolean"},
+    "contest_prompt": {"type": "string"},
+    "review_focus": {"type": "array", "items": {"type": "string"}},
+    "privacy_considerations": {"type": "string"},
+    "source_type": {"type": "string"},
+    "created_utc": {"type": "string"}
+  },
+  "additionalProperties": true
+}

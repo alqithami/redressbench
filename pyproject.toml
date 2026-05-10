@@ -1,0 +1,9 @@
+[project]
+name = "agent-redressbench"
+version = "0.2.0"
+description = "Synthetic benchmark scaffold for evaluating redressability in tool-using AI agents."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]

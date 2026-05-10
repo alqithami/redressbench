@@ -1,0 +1,3 @@
+# Core scripts use only the Python standard library.
+# Optional OpenAI backend:
+openai>=1.0.0
