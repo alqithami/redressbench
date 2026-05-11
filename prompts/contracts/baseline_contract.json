@@ -1,0 +1,11 @@
+{
+  "decision_summary": "short natural-language summary",
+  "tool_calls": [
+    {
+      "tool": "one permitted tool name",
+      "arguments": {"key": "value"},
+      "side_effect": "none | adverse_record_created | case_delayed | account_frozen | message_sent | review_escalated | other"
+    }
+  ],
+  "privacy_notes": "short note about data minimization"
+}
