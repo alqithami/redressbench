@@ -10,7 +10,7 @@ This repository contains the benchmark scenarios, prompts, output schemas, diagn
 
 ## Status
 
-This is an **anonymous research artifact**. Human annotation is still in progress. The automatic scores produced by this repository are **diagnostic triage signals**, not final safety labels. Final paper claims should use blinded human annotation and adjudication.
+This is an **anonymous research artifact**. The automatic scores produced by this repository are **diagnostic triage signals**, not final safety labels. For final paper claims, we use blinded human annotation and adjudication.
 
 ## What is included
 
@@ -202,27 +202,11 @@ PYTHONPATH=src python -m redressbench.annotation_agreement \
 2. Redress traces are **not equivalent to safety**. A model can produce complete-looking traces while still taking an inappropriate action.
 3. The benchmark uses **synthetic records**. It is designed for controlled evaluation, not as a claim that real institutions can be governed by synthetic examples alone.
 4. Human annotation should remain **condition-blinded** until final labels are frozen.
-5. If students or employees annotate, consult your institution's IRB or ethics process before using the data for publication.
-
-## Reproducibility checklist
-
-Before submitting the artifact, add or verify:
-
-- [ ] exact commit hash in the paper;
-- [ ] raw run JSONL files or archival link;
-- [ ] diagnostic summaries under `analysis/` or `results/`;
-- [ ] blinded annotation template and rubric;
-- [ ] final annotation CSVs after adjudication;
-- [ ] inter-annotator agreement report;
-- [ ] IRB/non-human-subjects/exempt determination if applicable;
-- [ ] anonymization check: no author names, institutional paths, API keys, or private mapping given to reviewers.
-
-See `docs/reproducibility.md` and `docs/anonymization_checklist.md`.
 
 ## Repository anonymity
 
-For double-anonymous review, host this artifact in an anonymous repository and avoid self-identifying commit metadata, README text, issue history, user paths, and filenames. Keep any private condition-mapping files out of the reviewer-facing artifact unless the paper explicitly says reviewers may inspect them.
+For double-anonymous review, this artifact in an anonymous repository and with self-identifying commit metadata, README text, issue history, user paths, and filenames. 
 
 ## License
 
-A license should be added after the anonymity and submission strategy are finalized. Until a license is added, treat the artifact as research supplementary material rather than a generally reusable software package.
+A license will be added after the anonymity and submission strategy are finalized. Until a license is added, this artifact is a research supplementary material rather than a generally reusable software package.
