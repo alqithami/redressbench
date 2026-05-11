@@ -1,5 +1,8 @@
-# Core scripts
+# Core analysis dependency
 pandas>=2.0.0
 
-# Optional OpenAI backend:
-openai>=1.0.0
+# Optional: install only if running OpenAI models
+# openai>=1.0.0
+
+# Optional: install only if running tests
+# pytest>=7.0.0
