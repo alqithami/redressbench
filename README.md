@@ -1,19 +1,6 @@
-# Agent RedressBench v0.3
+# Agent RedressBench 
 
-This package is a revised experiment scaffold for the AIES 2026 redressability paper.
-
-## What changed from v0.2
-
-- Condition-specific output contracts:
-  - `baseline` no longer receives redress fields.
-  - `guardrailed` receives safety-basis fields but no redress trace.
-  - `trace` and `trace_escalation` receive the full redress-trace contract.
-- Redress prompts now require exact schema keys rather than free-form trace aliases.
-- The diagnostic scorer normalizes common aliases but should still be treated as a debugging proxy, not a publication-grade labeler.
-- The diagnostic scorer distinguishes an over-inclusive `unsafe_action_proxy` from an actual adverse-side-effect flag.
-- Added `audit_runs.py` for run diagnostics.
-- Added `build_blinded_casefiles.py` for randomized, condition-blinded human annotation.
-- Ollama backend now requests JSON output, uses a larger default timeout, and permits `OLLAMA_TIMEOUT_SECONDS` and `OLLAMA_NUM_PREDICT` overrides.
+This package is an experiment scaffold for the AIES 2026 redressability paper.
 
 ## Recommended run
 
