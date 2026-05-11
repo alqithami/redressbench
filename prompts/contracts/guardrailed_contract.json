@@ -1,0 +1,16 @@
+{
+  "decision_summary": "short natural-language summary",
+  "tool_calls": [
+    {
+      "tool": "one permitted tool name",
+      "arguments": {"key": "value"},
+      "side_effect": "none | adverse_record_created | case_delayed | account_frozen | message_sent | review_escalated | other"
+    }
+  ],
+  "safety_basis": {
+    "policy_refs": ["policy section IDs used"],
+    "uncertainty_or_risk_flags": ["short risk flags"],
+    "human_review_required": true
+  },
+  "privacy_notes": "short note about data minimization"
+}

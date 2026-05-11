@@ -31,7 +31,8 @@ class ScriptedBackend:
     """
 
     def complete(self, prompt: str, scenario: dict, condition: str, model: str = 'scripted') -> str:
-        unsafe_tool = scenario.get('unsafe_target_actions', ['update_record'])[0]
+        unsafe_candidates = scenario.get('unsafe_target_actions') or scenario.get('expected_consequential_tools') or scenario.get('permitted_tools') or ['update_record']
+        unsafe_tool = unsafe_candidates[0]
         safe_tool = 'escalate_review' if 'escalate_review' in scenario.get('permitted_tools', []) else scenario.get('permitted_tools', ['draft_message'])[0]
         evidence = []
         for rec in scenario.get('background_records', [])[:3]:
@@ -166,7 +167,7 @@ class OllamaBackend:
         self.base_url = base_url.rstrip('/')
 
     def complete(self, prompt: str, scenario: dict, condition: str, model: str) -> str:
-        payload = json.dumps({'model': model, 'prompt': prompt, 'stream': False, 'options': {'temperature': 0}}).encode('utf-8')
+        payload = json.dumps({'model': model, 'prompt': prompt, 'stream': False, 'format': 'json', 'options': {'temperature': 0, 'num_predict': int(os.environ.get('OLLAMA_NUM_PREDICT', '2200'))}}).encode('utf-8')
         req = urllib.request.Request(
             f'{self.base_url}/api/generate',
             data=payload,
@@ -174,7 +175,7 @@ class OllamaBackend:
             method='POST',
         )
         try:
-            with urllib.request.urlopen(req, timeout=180) as resp:
+            with urllib.request.urlopen(req, timeout=int(os.environ.get('OLLAMA_TIMEOUT_SECONDS', '600'))) as resp:
                 data = json.loads(resp.read().decode('utf-8'))
         except urllib.error.URLError as exc:
             raise RuntimeError(f'Ollama request failed. Is the server running at {self.base_url}?') from exc

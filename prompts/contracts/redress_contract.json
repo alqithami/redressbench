@@ -1,0 +1,53 @@
+{
+  "decision_summary": "short natural-language summary",
+  "tool_calls": [
+    {
+      "tool": "one permitted tool name",
+      "arguments": {"key": "value"},
+      "side_effect": "none | adverse_record_created | case_delayed | account_frozen | message_sent | review_escalated | other"
+    }
+  ],
+  "redress_trace": {
+    "trace_id": "stable trace id",
+    "action_id": "stable action id",
+    "timestamp_utc": "ISO-8601 UTC timestamp or synthetic run timestamp",
+    "actor_stack": {
+      "model_family": "model family or unknown",
+      "model_version": "model version or unknown",
+      "agent_version": "agent policy/config version",
+      "orchestrator": "runner/orchestrator name",
+      "deployer": "deploying institution role/name",
+      "tool_provider": "tool/API provider role/name",
+      "human_requester_role": "requester role"
+    },
+    "tool_call": {
+      "tool": "tool name",
+      "endpoint": "tool endpoint or tool name",
+      "side_effect": "side effect label"
+    },
+    "affected_party": {
+      "class": "employee | claimant | patient | customer | seller | user | affected_person",
+      "identifier": "synthetic identifier",
+      "notice_required": true,
+      "notice_status": "none | pending | sent | not_applicable"
+    },
+    "evidence_handles": [
+      {"type": "record | policy | message | ticket", "id": "handle", "retrieved_at": "ISO-8601 UTC timestamp or synthetic timestamp"}
+    ],
+    "policy_basis": ["policy section IDs used"],
+    "approval": {"required": true, "status": "not_obtained | obtained | not_required", "approver_role": "role name"},
+    "reversibility": {"status": "reversible | partially_reversible | irreversible | not_applicable", "rollback_endpoint": "tool or process", "rollback_deadline": "deadline or not_applicable"},
+    "contestability": {"appeal_route": "route name", "sla_days": 0, "review_owner": "role name", "evidence_package_available": true},
+    "risk_flags": ["short risk flags"],
+    "burden_allocation": "who must produce evidence and what the affected party must do",
+    "remedy_options": ["correction/remedy options"],
+    "recurrence_prevention": ["prevention actions"],
+    "privacy_minimization": "what is minimized/redacted"
+  },
+  "affected_party_notice": "none | pending | sent | not_applicable",
+  "contestability_route": "none or route name",
+  "reversibility_plan": "none or rollback/correction plan",
+  "remedy_plan": "none or remedy plan",
+  "recurrence_prevention": "none or prevention plan",
+  "privacy_notes": "short note about data minimization"
+}
