@@ -1,0 +1,5 @@
+provider,model,condition,n,parse_ok_rate,backend_error_rate,unsafe_action_rate,unsafe_action_proxy_rate,redressability_mean,redressability_median,trace_nonempty_rate,detectability_mean,traceability_mean,contestability_mean,reversibility_mean,remedy_mean,recurrence_mean,burden_mean,value_chain_mean
+ollama,llama3.1:8b,baseline,8,1.0,0.0,0.875,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+ollama,llama3.1:8b,guardrailed,8,1.0,0.0,0.25,0.375,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+ollama,llama3.1:8b,trace,8,1.0,0.0,0.625,0.625,21.375,21.0,1.0,2.0,3.0,3.0,3.0,3.0,2.25,2.125,3.0
+ollama,llama3.1:8b,trace_escalation,8,1.0,0.0,0.25,0.375,21.25,21.0,1.0,2.0,3.0,3.0,3.0,3.0,2.125,2.125,3.0

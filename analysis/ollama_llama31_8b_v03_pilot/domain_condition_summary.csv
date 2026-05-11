@@ -1,0 +1,5 @@
+domain,condition,n,parse_ok_rate,unsafe_action_rate,unsafe_action_proxy_rate,redressability_mean,trace_nonempty_rate
+workplace,baseline,8,1.0,0.875,1.0,0.0,0.0
+workplace,guardrailed,8,1.0,0.25,0.375,0.0,0.0
+workplace,trace,8,1.0,0.625,0.625,21.375,1.0
+workplace,trace_escalation,8,1.0,0.25,0.375,21.25,1.0
