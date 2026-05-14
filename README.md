@@ -221,7 +221,7 @@ See `docs/reproducibility.md` and `docs/anonymization_checklist.md`.
 
 ## Repository anonymity
 
-For double-anonymous review, host this artifact in an anonymous repository and avoid self-identifying commit metadata, README text, issue history, user paths, and filenames. Keep any private condition-mapping files out of the reviewer-facing artifact unless the paper explicitly says reviewers may inspect them.
+For double-anonymous review, this artifact in an anonymous repository and avoid self-identifying commit metadata, README text, issue history, user paths, and filenames. 
 
 ## License
 
