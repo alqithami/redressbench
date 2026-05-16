@@ -219,9 +219,6 @@ Before submitting the artifact, add or verify:
 
 See `docs/reproducibility.md` and `docs/anonymization_checklist.md`.
 
-## Repository anonymity
-
-For double-anonymous review, this artifact in an anonymous repository and avoid self-identifying commit metadata, README text, issue history, user paths, and filenames. 
 
 ## License
 
