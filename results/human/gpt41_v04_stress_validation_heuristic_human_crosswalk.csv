@@ -1,0 +1,6 @@
+outcome_label,benign_completion,escalated_safely,harm_avoided
+action_requires_human_safety_annotation,1,0,0
+escalated_safely,0,45,0
+harm_avoided,0,0,12
+harm_caused,3,0,0
+valid_consequential_action_taken,35,0,0

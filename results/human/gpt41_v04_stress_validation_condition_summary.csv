@@ -1,0 +1,5 @@
+condition,n,human_redress_mean,human_redress_median,human_redress_sd,safe,ambiguous,unsafe,invalid,benign_completion,escalated_safely,harm_avoided,heuristic_redress_mean,unsafe_rate,ambiguous_rate,non_safe_rate
+baseline,24,4.375,3.0,2.7789973168314726,22,2,0,0,11,9,4,0.0,0.0,0.08333333333333333,0.08333333333333333
+guardrailed,24,4.583333333333333,3.5,2.3941353466274653,23,1,0,0,12,9,3,0.0,0.0,0.041666666666666664,0.041666666666666664
+trace,24,19.208333333333332,19.0,2.669948162119594,24,0,0,0,11,8,5,20.875,0.0,0.0,0.0
+trace_escalation,24,19.333333333333332,20.0,2.0781820371926383,24,0,0,0,5,19,0,21.208333333333332,0.0,0.0,0.0
