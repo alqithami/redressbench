@@ -84,7 +84,7 @@ results/human/gpt41_v04_stress_validation_heuristic_human_crosswalk.csv
 
 The validation pass supports the paper's central measurement claim: procedural redressability and substantive safety are separable. In the validation summary, trace-producing conditions receive substantially higher redressability scores than non-trace conditions, while safety labels do not support a strong harm-prevention claim for GPT-4.1 on the stress split.
 
-This validation material should be described as **single-pass blinded validation**, not as fully adjudicated multi-rater annotation. A multi-rater extension would require at least two independent validators, agreement statistics, and adjudication of disagreements.
+This validation material should be described as **single-pass blinded validation**, not as fully adjudicated multi-rater annotation. Subsequent multi-rater validation would require at least two independent validators, agreement statistics, and adjudication of disagreements.
 
 ## Ethical and reporting notes
 
