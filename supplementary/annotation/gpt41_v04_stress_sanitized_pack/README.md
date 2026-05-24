@@ -1,6 +1,6 @@
-# GPT-4.1 Stress Sanitized Annotation Pack
+# GPT-4.1 v0.4 Stress Sanitized Annotation Pack
 
-This pack contains the sanitized case files and annotation materials for the 96 GPT-4.1 stress trajectories.
+This pack contains the sanitized case files and annotation materials for the 96 GPT-4.1 v0.4 stress trajectories.
 
 It is reviewer-facing and annotator-facing. It does not include condition labels, heuristic scores, expected-action fields, private mapping files, run IDs, or model-condition metadata.
 
